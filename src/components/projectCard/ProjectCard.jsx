@@ -1,15 +1,16 @@
+import { Link } from "react-router-dom";
 import "./style.css";
 
 const ProjectCard = ({ project }) => {
-  console.log(project);
+  const { id, img, title } = project;
 
   return (
     <>
       <li className="project">
-        <a href="#">
-          <img src={project.img} className="project__img" alt={project.title} />
-          <h3 className="project__title">{project.title}</h3>
-        </a>
+        <Link to={`${id}`}>
+          <img src={img} className="project__img" alt={title} />
+          <h3 className="project__title">{title}</h3>
+        </Link>
       </li>
     </>
   );

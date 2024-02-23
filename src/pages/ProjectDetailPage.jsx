@@ -1,24 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useMemo, useContext } from "react";
 import ProjectDetail from "../components/projectDetail/ProjectDetail";
 import { useParams } from "react-router-dom";
 
-import { filterProjectList } from "../helpers/filterList";
+import { ProjectContext } from "../App";
 
 const ProjectDetailPage = () => {
   const { id } = useParams();
+  const projects = useContext(ProjectContext);
 
-  useEffect(() => {
-    if (id) {
-      console.log(id);
-
-      const projectDetailID = filterProjectList(id);
-      console.log(projectDetailID);
-    }
-  }, []);
+  const project = projects.find((p) => {
+    return p.id === +id;
+  });
 
   return (
     <>
-      <ProjectDetail />
+      <ProjectDetail project={project} />
     </>
   );
 };

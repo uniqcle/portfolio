@@ -10,18 +10,25 @@ import ProjectDetailPage from "./pages/ProjectDetailPage";
 import SkillsPage from "./pages/SkillsPage";
 import ContactsPage from "./pages/ContactsPage";
 
+import { createContext } from "react";
+import { projectsList } from "./helpers/projectList";
+
+export const ProjectContext = createContext(null);
+
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index path="/" element={<HomePage />} />
-          <Route path="projects" element={<ProjectsPage />} />
-          <Route path="projects/:id" element={<ProjectDetailPage />} />
-          <Route path="skills" element={<SkillsPage />} />
-          <Route path="contacts" element={<ContactsPage />} />
-        </Route>
-      </Routes>
+      <ProjectContext.Provider value={projectsList}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index path="/" element={<HomePage />} />
+            <Route path="projects" element={<ProjectsPage />} />
+            <Route path="projects/:id" element={<ProjectDetailPage />} />
+            <Route path="skills" element={<SkillsPage />} />
+            <Route path="contacts" element={<ContactsPage />} />
+          </Route>
+        </Routes>
+      </ProjectContext.Provider>
     </>
   );
 }
