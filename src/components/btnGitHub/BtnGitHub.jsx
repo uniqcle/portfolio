@@ -4,7 +4,7 @@ import githubFooter from "../../imgs/icons/git.png";
 const BtnGitHub = ({ link, repoName, footer }) => {
   return (
     <>
-      <a href={link} className="btn-outline" target="_blank">
+      <a href={link} className="btn-outline" target="_blank" rel="noreferrer">
         {repoName === "website" ? (
           ""
         ) : (

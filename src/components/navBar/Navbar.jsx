@@ -1,16 +1,21 @@
+import { NavLink } from "react-router-dom";
 import "./style.css";
 
 import sun from "../../imgs/icons/sun.svg";
 import moon from "../../imgs/icons/moon.svg";
+
+const setActiveLink = ({ isActive }) => {
+  return isActive ? "nav-list__link nav-list__link--active" : "nav-list__link";
+};
 
 const Navbar = () => {
   return (
     <nav className="nav">
       <div className="container">
         <div className="nav-row">
-          <a className="logo" href="./index.html">
+          <NavLink className="logo" to="/">
             <strong>Uniqcle</strong> Portfolio
-          </a>
+          </NavLink>
 
           <button className="dark-mode-btn ">
             <img src={sun} className="dark-mode-btn_icon" alt="" />
@@ -19,22 +24,19 @@ const Navbar = () => {
 
           <ul className="nav-list">
             <li className="nav-list-item">
-              <a
-                href="./projects.html"
-                className="nav-list__link nav-list__link--active"
-              >
+              <NavLink to="/projects" className={setActiveLink}>
                 Projects
-              </a>
+              </NavLink>
             </li>
             <li className="nav-list-item">
-              <a href="./skills.html" className="nav-list__link">
+              <NavLink to="/skills" className={setActiveLink}>
                 Skills
-              </a>
+              </NavLink>
             </li>
             <li className="nav-list-item">
-              <a href="./contacts.html" className="nav-list__link">
+              <NavLink to="/contacts" className={setActiveLink}>
                 Contacts
-              </a>
+              </NavLink>
             </li>
           </ul>
 
@@ -45,19 +47,19 @@ const Navbar = () => {
           <div className="mobile-nav">
             <ul className="nav-list">
               <li className="nav-list-item">
-                <a href="./projects.html" className="nav-list__link">
+                <NavLink to="/projects" className={setActiveLink}>
                   Projects
-                </a>
+                </NavLink>
               </li>
               <li className="nav-list-item">
-                <a href="./skills.html" className="nav-list__link">
+                <NavLink to="/skills" className={setActiveLink}>
                   Skills
-                </a>
+                </NavLink>
               </li>
               <li className="nav-list-item">
-                <a href="./contacts.html" className="nav-list__link">
+                <NavLink to="/contacts" className={setActiveLink}>
                   Contacts
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
