@@ -19,7 +19,7 @@ const BestProjects = () => {
       return (
         <li key={id} className="project">
           <Link to={`projects/${id}`}>
-            <img src={img} className="project__img" alt="project img" />
+            <img src={img} className="project__img" alt={title} />
             <h3 className="project__title">{title}</h3>
           </Link>
         </li>
