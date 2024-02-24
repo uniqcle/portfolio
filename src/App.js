@@ -12,12 +12,15 @@ import ContactsPage from "./pages/ContactsPage";
 
 import { createContext } from "react";
 import { projectsList } from "./helpers/projectList";
+import ScrollToTop from "./utils/scrollToTop";
+
 
 export const ProjectContext = createContext(null);
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <ProjectContext.Provider value={projectsList}>
         <Routes>
           <Route path="/" element={<Layout />}>
