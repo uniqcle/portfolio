@@ -196,6 +196,12 @@ html, body{
 	transition: all 0.2s ease-in; 
 }
 
+.btn-filter--active{
+	background-color: var(--accent);
+	color: white; 
+	transition: all 0.2s ease-in; 
+}
+
 /* Projects */ 
 .projects {
 	display: flex; 

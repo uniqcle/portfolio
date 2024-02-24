@@ -6,7 +6,7 @@ export const filterList = [
   },
   {
     id: 2,
-    title: "javascript",
+    title: "js",
     label: "JavaScript",
   },
   {
