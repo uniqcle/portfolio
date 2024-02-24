@@ -11,7 +11,6 @@ const ProjectsList = () => {
 
   const changeFilter = (filter) => {
     setFilter(filter);
-    console.log(filter);
   };
 
   const filterProjects = (projects, filter) => {

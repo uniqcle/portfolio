@@ -6,7 +6,7 @@ const BtnGitHub = ({ link, repoName, footer }) => {
     <>
       <a
         href={link}
-        className={!footer && "btn-outline"}
+        className={footer ? "" : "btn-outline"}
         target="_blank"
         rel="noreferrer"
       >
