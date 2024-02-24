@@ -1,6 +1,6 @@
 import BtnGitHub from '../btnGitHub/BtnGitHub';
 import "./style.css";
-
+import { useLocalStorage } from "../../utils/useLocalStorage";
 
 const Footer = () => {
   const currentDate = new Date().getFullYear();
