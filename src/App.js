@@ -1,14 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 
-import "./styles/reset.css";
-import "./styles/main.css";
-
 import Layout from "./components/layout/Layout";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
 import SkillsPage from "./pages/SkillsPage";
 import ContactsPage from "./pages/ContactsPage";
+
+import "./styles/reset.css";
+import "./styles/main.css";
 
 import { createContext } from "react";
 import { projectsList } from "./helpers/projectList";

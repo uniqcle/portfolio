@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useContext } from "react";
+import { useContext } from "react";
 import ProjectDetail from "../components/projectDetail/ProjectDetail";
 import { useParams } from "react-router-dom";
 

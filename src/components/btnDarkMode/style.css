@@ -1,0 +1,12 @@
+@media(max-width:620px){
+	.dark-mode-btn{
+		order: 1; 
+	}
+}
+
+
+@media(max-width:380px){
+	.dark-mode-btn{
+		display: none; 
+	}
+}
