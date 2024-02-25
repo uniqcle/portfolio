@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./style.css";
-
 
 import BtnDarkMode from "../btnDarkMode/BtnDarkMode";
 
@@ -9,6 +9,23 @@ const setActiveLink = ({ isActive }) => {
 };
 
 const Navbar = () => {
+  const [isMobileNavActive, setMobileNav] = useState(null);
+  const [isCloseMobileBtn, setCloseMobileBtn] = useState(null);
+
+  const classNamesMobileBtns = isCloseMobileBtn
+    ? "mobile-nav__button mobile-nav__button-close"
+    : "mobile-nav__button";
+  const classNamesMoble = isMobileNavActive
+    ? "mobile-nav mobile-nav--active"
+    : "mobile-nav";
+
+  const toggle = (e) => {
+    e.stopPropagation();
+
+    setMobileNav((state) => !state);
+    setCloseMobileBtn((state) => !state);
+  };
+
   return (
     <nav className="nav">
       <div className="container">
@@ -37,11 +54,11 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <button className="mobile-nav__button">
+          <button className={classNamesMobileBtns} onClick={(e) => toggle(e)}>
             <span className="nav-button__icon"></span>
           </button>
 
-          <div className="mobile-nav">
+          <div className={classNamesMoble}>
             <ul className="nav-list">
               <li className="nav-list-item">
                 <NavLink to="/projects" className={setActiveLink}>
