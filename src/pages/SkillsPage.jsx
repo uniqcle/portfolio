@@ -1,3 +1,5 @@
+import Certificates from "../components/certificates/Certificates";
+
 const SkillsPage = () => {
   return (
     <>
@@ -9,19 +11,19 @@ const SkillsPage = () => {
             <li className="content-list__item">
               <h2 className="title-h2">Frontend</h2>
               <p>
-                JavaScript, TypeScript, ReactJS, Angular, Redux, HTML, CSS, NPM,
-                BootStrap, MaterialUI, Yarn, TailwindCSS, StyledComponents
+                JavaScript, React, Redux, TypeScript, HTML, CSS, SASS, NPM,
+                BootStrap, TailwindCSS, StyledComponents, GULP
               </p>
             </li>
 
             <li className="content-list__item">
               <h2 className="title-h2">Backend</h2>
-              <p>NodeJS, MySQL, MongoDB, PHP, Laravel</p>
+              <p>PHP, MySQL, Yii2, Bitrix, NodeJS</p>
             </li>
 
             <li className="content-list__item">
               <h2 className="title-h2">Сertificates</h2>
-              <p>NodeJS, MySQL, MongoDB, PHP, Laravel</p>
+              <Certificates />
             </li>
           </ul>
         </div>
