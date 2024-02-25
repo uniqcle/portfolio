@@ -14,7 +14,6 @@ const BestProjects = () => {
 
   const renderBest = (bestProjects) => {
     const bestItems = bestProjects.map((p) => {
-      console.log(p);
       const { id, title, img } = p;
       return (
         <li key={id} className="project">

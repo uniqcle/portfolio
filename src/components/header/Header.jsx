@@ -36,8 +36,15 @@ const Header = () => {
             First, solve the problem. Then, write the code.{" "}
           </p>
         </div>
-        <a href="#!" className="btn">
-          Download CV
+
+        <a
+          href="/upload/anuchkin.pdf"
+          download="Anuchkin_Andrey_Resume"
+          target="_blank"
+          rel="noreferrer"
+          className="btn"
+        >
+          <button>Download CV</button>
         </a>
       </div>
     </header>

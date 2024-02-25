@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { ProjectContext } from "../../App";
 import { useLocalStorage } from "../../utils/useLocalStorage";
 import Filter from "../filter/Filter";
