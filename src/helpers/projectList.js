@@ -17,8 +17,9 @@ import react13 from "./../imgs/projects/react/employee-accounting.png";
 import htmlcss14 from "./../imgs/projects/htmlcss/mntn.png";
 import htmlcss15 from "./../imgs/projects/htmlcss/mono.png";
 import htmlcss16 from "./../imgs/projects/htmlcss/realestate.png";
-import htmlcss117 from "./../imgs/projects/htmlcss/turism.png";
+import htmlcss17 from "./../imgs/projects/htmlcss/turism.png";
 
+import react18 from "./../imgs/projects/react/marvel.png";
 
 const projectsList = [
   //bitrix
@@ -188,8 +189,17 @@ const projectsList = [
     website: "https://uniqcle.github.io/turism/",
     filter: "htmlcss",
     skills: ["html", "css", "javascript"],
-    img: htmlcss117,
+    img: htmlcss17,
     gitHubLink: "https://github.com/uniqcle/2rism",
+  },
+  {
+    id: 18,
+    best: false,
+    title: "Marvel App",
+    filter: "react",
+    skills: ["react"],
+    img: react18,
+    gitHubLink: "https://github.com/uniqcle/MarvelHooks",
   },
 ];
 
