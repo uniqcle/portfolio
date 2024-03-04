@@ -20,6 +20,7 @@ import htmlcss16 from "./../imgs/projects/htmlcss/realestate.png";
 import htmlcss17 from "./../imgs/projects/htmlcss/turism.png";
 
 import react18 from "./../imgs/projects/react/marvel.png";
+import react19 from "./../imgs/projects/react/countries.png";
 
 const projectsList = [
   //bitrix
@@ -200,6 +201,15 @@ const projectsList = [
     skills: ["react"],
     img: react18,
     gitHubLink: "https://github.com/uniqcle/MarvelHooks",
+  },
+  {
+    id: 19,
+    best: false,
+    title: "Countries App",
+    filter: "react",
+    skills: ["react", "Styled Components"],
+    img: react19,
+    gitHubLink: "https://github.com/uniqcle/countries",
   },
 ];
 
